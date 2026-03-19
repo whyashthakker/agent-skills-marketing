@@ -3,7 +3,7 @@
 Competitor keyword gap analysis using DataForSEO API
 Finds keywords where competitor ranks but you don't
 
-Usage: python3 scripts/competitor_gap.py "opc.dev" "claudemarketplaces.com" --limit 50
+Usage: python3 scripts/competitor_gap.py "infloq.com" "competitor.com" --limit 50
 """
 import argparse
 from dataforseo_api import api_post, get_result, format_count
