@@ -1,3 +1,17 @@
 # local-seo-optimizer
 
-Plans local SEO improvements for listings, pages, and reputation signals.
+Plans local search improvements across profiles, local pages, citations, and
+review systems.
+
+## What it helps with
+
+- local listings
+- location page strategy
+- review generation
+- NAP consistency
+
+## Typical output
+
+- local SEO audit summary
+- priority fixes
+- content and review recommendations

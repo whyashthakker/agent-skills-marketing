@@ -1,12 +1,20 @@
-# Infloq Skills
+# Marketing Skills
 
-A reusable library of Claude Code style skills for marketing, creator
+A reusable library of agent skills for marketing, creator
 operations, SEO, GEO, lifecycle, and campaign execution.
 
-These skills live under [`.claude/skills`](/Users/yash/code/infloq-skill/.claude/skills) and are designed to be used in two ways:
+This repo includes the same skill library in both:
+
+- [`.agents/skills`](/Users/yash/code/infloq-skill/.agents/skills)
+- [`.claude/skills`](/Users/yash/code/infloq-skill/.claude/skills)
+
+Use `.agents/skills` as the broader agent-compatible version.
+Use `.claude/skills` when you specifically want the Claude-oriented copy.
+
+They are designed to be used in two ways:
 
 1. Use the repo as a full skill library.
-2. Copy individual skill folders into your own local `.claude/skills/` directory.
+2. Copy individual skill folders into your own agent skills directory.
 
 ## What These Skills Are
 
@@ -24,7 +32,8 @@ creator-marketing and influencer workflows, with examples grounded in
 
 ## Prerequisites
 
-You need Claude Code installed and configured.
+You need Claude Code installed and configured if you want to use these in Claude
+Code.
 
 Official Anthropic docs:
 - Claude Code overview: https://docs.anthropic.com/en/docs/claude-code/overview
@@ -41,30 +50,56 @@ git clone https://github.com/infloq/skills.git
 cd skills
 ```
 
-Then copy the full skill collection into your Claude skills directory:
+Then copy the full skill collection into your preferred skills directory.
+
+Recommended source in this repo:
+
+```bash
+.agents/skills/
+```
+
+For Claude Code only:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R .claude/skills/* ~/.claude/skills/
+cp -R .agents/skills/* ~/.claude/skills/
+```
+
+For shared multi-agent use:
+
+```bash
+mkdir -p /path/to/your-project/.agents/skills
+cp -R .agents/skills/* /path/to/your-project/.agents/skills/
 ```
 
 After that, open Claude Code in any project and use the skills via normal task prompts.
 
 ## Option 2: Copy Only The Skills You Want
 
-If you only want a few skills, copy individual folders:
+If you only want a few skills, copy individual folders.
+
+For Claude Code:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R .claude/skills/influencer-brief ~/.claude/skills/
-cp -R .claude/skills/generative-engine-optimisation-geo ~/.claude/skills/
-cp -R .claude/skills/ugc-brief-generator ~/.claude/skills/
+cp -R .agents/skills/influencer-brief ~/.claude/skills/
+cp -R .agents/skills/generative-engine-optimisation-geo ~/.claude/skills/
+cp -R .agents/skills/ugc-brief-generator ~/.claude/skills/
+```
+
+For `.agents`:
+
+```bash
+mkdir -p /path/to/your-project/.agents/skills
+cp -R .agents/skills/influencer-brief /path/to/your-project/.agents/skills/
+cp -R .agents/skills/generative-engine-optimisation-geo /path/to/your-project/.agents/skills/
+cp -R .agents/skills/ugc-brief-generator /path/to/your-project/.agents/skills/
 ```
 
 This is the simplest “copy and paste” approach.
 
-You can also drag a skill folder directly into your local `~/.claude/skills/`
-directory in Finder if you do not want to use terminal copy commands.
+You can also drag a skill folder directly into either `~/.claude/skills/` or
+`.agents/skills/` if you do not want to use terminal copy commands.
 
 ## How To Use The Skills
 
@@ -95,13 +130,17 @@ request matches the skill’s description and purpose.
 In your actual working repo, keep:
 
 - a root `CLAUDE.md` for project-specific guidance
-- a local `.claude/skills/` folder for reusable skills
+- a local `.agents/skills/` folder for reusable agent skills
+- optionally a local `.claude/skills/` folder for Claude-specific placement
 
 Typical layout:
 
 ```text
 your-project/
 ├── CLAUDE.md
+├── .agents/
+│   └── skills/
+│       └── ...
 └── .claude/
     └── skills/
         ├── influencer-brief/
@@ -110,7 +149,8 @@ your-project/
 ```
 
 Use `CLAUDE.md` for company or project context.
-Use skills for repeatable workflows.
+Use `.agents/skills` as the default shared skills location.
+Use `.claude/skills` when you explicitly want Claude-only placement.
 
 ## Skill Categories
 
@@ -183,7 +223,14 @@ If you want one skill only:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R .claude/skills/influencer-brief ~/.claude/skills/
+cp -R .agents/skills/influencer-brief ~/.claude/skills/
+```
+
+Or:
+
+```bash
+mkdir -p /path/to/your-project/.agents/skills
+cp -R .agents/skills/influencer-brief /path/to/your-project/.agents/skills/
 ```
 
 Then in Claude Code:
@@ -198,7 +245,14 @@ Install the whole set:
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R .claude/skills/* ~/.claude/skills/
+cp -R .agents/skills/* ~/.claude/skills/
+```
+
+Or install them into `.agents/skills`:
+
+```bash
+mkdir -p /path/to/your-project/.agents/skills
+cp -R .agents/skills/* /path/to/your-project/.agents/skills/
 ```
 
 Then use whichever workflow fits:
@@ -217,11 +271,13 @@ Create the KPI dashboard structure
 - Many of the skills are useful for any website or marketing team.
 - The creator-marketing workflows are especially aligned with
   [Infloq](https://infloq.com).
+- In this repo, `.agents/skills` is the primary portable skill library.
+- `.claude/skills` is kept as a Claude-oriented mirror.
 
 ## Repository Structure
 
 ```text
-.claude/
+.agents/
 └── skills/
     ├── skill-name/
     │   ├── SKILL.md
@@ -231,6 +287,10 @@ Create the KPI dashboard structure
     │   ├── references/
     │   └── examples/
     └── ...
+
+.claude/
+└── skills/
+    └── ... mirrored copy
 ```
 
 ## Next Step
