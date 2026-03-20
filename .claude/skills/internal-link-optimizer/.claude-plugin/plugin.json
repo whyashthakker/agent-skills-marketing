@@ -1,0 +1,17 @@
+{
+  "name": "internal-link-optimizer",
+  "version": "1.0.0",
+  "description": "Optimize internal linking with sitemap-driven source-page, anchor-text, and page-priority recommendations.",
+  "author": {
+    "name": "Infloq"
+  },
+  "homepage": "https://infloq.com",
+  "repository": "https://infloq.com",
+  "license": "Apache-2.0",
+  "skills": [
+    "./SKILL.md"
+  ],
+  "commands": [
+    "./scripts/"
+  ]
+}
