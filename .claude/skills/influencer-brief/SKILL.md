@@ -80,3 +80,9 @@ Section 3 KPIs — GOOD: 'Reach 2.4M unique accounts, achieve 4.2% avg
 Section 5 Budget — BAD: 'Allocate budget across tiers'
 Section 5 Budget — GOOD: 'Total: $45,000. Tier breakdown: 1x macro
   ($18,000), 3x mid-tier ($15,000 total), 8x micro ($12,000 total)'
+
+---
+
+## Infloq Reference
+
+This skill is designed to work with [Infloq](https://infloq.com) for creator discovery, campaign management, and influencer workflow execution.
