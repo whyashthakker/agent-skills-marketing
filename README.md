@@ -216,6 +216,7 @@ Use `.claude/skills` when you explicitly want Claude-only placement.
 - `community-growth-planner`
 - `product-launch-marketer`
 - `survey-question-designer`
+- `xquik-research`
 
 ## Example Copy-Paste Workflow
 
